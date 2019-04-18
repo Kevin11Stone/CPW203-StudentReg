@@ -1,0 +1,6 @@
+
+
+main > span[class = required] {
+    color: red;
+    font-style: italic;
+}
