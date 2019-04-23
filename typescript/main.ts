@@ -12,8 +12,8 @@ class Student {
     dateOfBirth:Date;
 }
 
-// test code
-// student object
+// create a new instance/object
+// instantiate student object
 let testStu:Student = new Student();
 testStu.firstName = "Joe";
 testStu.lastName = "Oritz";
@@ -42,7 +42,8 @@ function registerStudent() {
 
 
 /**
- * 
+ * Gets user input from the form and wraps it in a 
+ * student object
  */
 function getStudent():Student {
     // create object
