@@ -62,9 +62,17 @@ function getStudent():Student {
 
 
 
-// accept student as a parameter, the right type
+// accept student as a parameter, with the student type
 function displayStudent(stu:Student) {
-    alert(stu.firstName + " " + stu.lastName);
+    // give me the list item
+    let studentLI:HTMLLIElement = document.createElement("li");
+    // insert into list item element
+    studentLI.innerText = stu.firstName + " " + stu.lastName;
+
+    // give me unordered list that is a child of dive with id = roster
+    // and append (add) the new list item element
+    let list = document.querySelector("#roster > ul");
+    list.appendChild(studentLI);
 }
 
 
