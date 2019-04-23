@@ -66,13 +66,29 @@ function getStudent():Student {
 function displayStudent(stu:Student) {
     // give me the list item
     let studentLI:HTMLLIElement = document.createElement("li");
+
     // insert into list item element
     studentLI.innerText = stu.firstName + " " + stu.lastName;
+
+    // onclick event handler
+    studentLI.onclick = function() {
+        
+        // this triggers the function
+        let agree = confirm("Are you sure you want to delete?");
+
+        if(agree) {
+            let currItem = <HTMLLIElement>this;
+            currItem.remove();
+        }
+    }
+
 
     // give me unordered list that is a child of dive with id = roster
     // and append (add) the new list item element
     let list = document.querySelector("#roster > ul");
     list.appendChild(studentLI);
+
+    
 }
 
 
